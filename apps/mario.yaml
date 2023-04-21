@@ -20,7 +20,13 @@ spec:
         name: mario-game
         ports:
         - containerPort: 8080
-
+        volumeMounts:
+        - name: mypd
+          mountpath: "/tmp/persistent"
+      volumes:
+      - name: mypd
+        persistentVolumeClaim:
+          claimName: myclaim
 
 ---
 apiVersion: v1
