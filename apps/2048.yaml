@@ -20,15 +20,7 @@ spec:
         name: 2048-game
         ports:
         - containerPort: 80
-        volumeMounts:
-        - name: mypd
-          mountpath: "/tmp/persistent"
-      volumes:
-      - name: mypd
-        persistentVolumeClaim:
-          claimName: myclaim
-
-
+        
 ---
 apiVersion: v1
 kind: Service
