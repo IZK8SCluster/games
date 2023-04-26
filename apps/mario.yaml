@@ -5,7 +5,7 @@ metadata:
     app: mario-game
   name: mario-game
 spec:
-  replicas: 4
+  replicas: 3
   selector:
     matchLabels:
       app: mario-game
